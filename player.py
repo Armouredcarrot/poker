@@ -2,12 +2,12 @@ class Player:
     """
     class to identefy the players
 
-    Attributes :
+    Attributes:
         name(str): the name of the player
         chips(int): the player money
     """
     def __init__(self, name, chips):
-        self._name = name
+        self.name = name
         self.chips = chips
 
     @property
@@ -28,4 +28,4 @@ class Player:
             self._chips -= new_count
 
     def __str__(self):
-        return f'{self._name} has {self.chips} chips'
+        return f'{self.name} has {self.chips} chips'

@@ -2,7 +2,7 @@ class PokerCard:
     """
     a poker card
 
-    Attributes :
+    Attributes:
          suit(str): the suit of the card
          number(int): the number of the card
 
