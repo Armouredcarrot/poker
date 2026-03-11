@@ -2,7 +2,7 @@ class Player:
     """
     class to identefy the players
 
-    Attributes
+    Attributes :
         name(str): the name of the player
         chips(int): the player money
     """
