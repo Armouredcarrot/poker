@@ -10,22 +10,16 @@ class Player:
         self.name = name
         self.chips = chips
 
-    @property
     def chips(self):
-        return self._chips
-
-    @chips.setter
-    def chips(self, value):
-        if isinstance(value, int):
-            self._chips = value
+        return self.chips
 
     def add(self, new_count):
         if isinstance(new_count, int):
-            self._chips += new_count
+            self.chips += new_count
 
     def remove(self, new_count):
         if isinstance(new_count, int):
-            self._chips -= new_count
+            self.chips -= new_count
 
     def __str__(self):
         return f'{self.name} has {self.chips} chips'
