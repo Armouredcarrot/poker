@@ -10,16 +10,16 @@ class Pot:
 
     """
 
-    def __init__(self, players, chips):
+    def __init__(self, players, chips=0):
         self.players = players
         self.chips = chips
 
-    @property
+
     def chips(self):
         return self.chips
 
-    @chips.setter
-    def chips(self, n_chips):
+
+    def add_chips(self, n_chips):
         if isinstance(n_chips, int) and n_chips >= 0:
             self.chips += n_chips
         else:
@@ -27,12 +27,13 @@ class Pot:
 
 
 
-    @property
     def players(self):
-        return self.players
+        if isinstance(self.players, Player):
+            return self.players
+        else:
+            raise TypeError('players must be a Player')
 
-    @players.setter
-    def players(self, players):
+    def remove_players(self, players):
         if isinstance(players, list) and len(players) >= 2 and players in self.players:
             self.players.remove(players)
         else:
